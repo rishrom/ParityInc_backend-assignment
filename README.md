@@ -22,12 +22,12 @@ Quit the server with CONTROL-C.
  3. **NOTE:** Use `sh run.sh` for *subsequent* runs after using the `one_time_setup.sh`  to setup everything *initially*.
 
 # API
-In this section we explain the APIs supported by this application and their usage.
+In this section we explain the APIs supported by this application and their usage.<br/>
 **NOTE:** All APIs require authentication (use the super user created above via Django admin panel).
 
 ## Houses
-`HTTP Request URL` : [http://localhost:8008/houses/](http://localhost:8008/houses/)
-`HTTP Methods Supported` : `GET, POST, HEAD, OPTIONS`
+`HTTP Request URL` : [http://localhost:8008/houses/](http://localhost:8008/houses/)<br/>
+`HTTP Methods Supported` : `GET, POST, HEAD, OPTIONS`<br/>
 `HTTP GET Response` :
 ```
 {
@@ -105,8 +105,8 @@ In this section we explain the APIs supported by this application and their usag
 ```
 
 ## Houses < ID >
-`HTTP Request URL` : [http://localhost:8008/houses/<house_id>](http://localhost:8008/houses/<house_id>)
-`HTTP Methods Supported` : `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`
+`HTTP Request URL` : [http://localhost:8008/houses/<house_id>](http://localhost:8008/houses/<house_id>)<br/>
+`HTTP Methods Supported` : `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`<br/>
 `HTTP GET Response` :
 ```
 {
@@ -159,12 +159,12 @@ In this section we explain the APIs supported by this application and their usag
 }
 ```
 #### HTTP DELETE [http://localhost:8008/houses/<house_id>](http://localhost:8008/houses/<house_id>)
-`Request Content` : `None`
+`Request Content` : `None`<br/>
 `Response Content` :`HTTP 204 No Content`
 
 ## Thermostats
-`HTTP Request URL` : [http://localhost:8008/thermostats/](http://localhost:8008/thermostats/)
-`HTTP Methods Supported` : `GET, POST, HEAD, OPTIONS`
+`HTTP Request URL` : [http://localhost:8008/thermostats/](http://localhost:8008/thermostats/)<br/>
+`HTTP Methods Supported` : `GET, POST, HEAD, OPTIONS`<br/>
 `HTTP GET Response` :
 ```
 {
@@ -211,8 +211,8 @@ In this section we explain the APIs supported by this application and their usag
 ```
 
 ## Thermostats < ID >
-`HTTP Request URL` : [http://localhost:8008/thermostats/<thermostat_id>](http://localhost:8008/thermostats/<thermostat_id>)
-`HTTP Methods Supported` : `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`
+`HTTP Request URL` : [http://localhost:8008/thermostats/<thermostat_id>](http://localhost:8008/thermostats/<thermostat_id>)<br/>
+`HTTP Methods Supported` : `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`<br/>
 `HTTP GET Response` :
 ```
     "url": "http://localhost:8008/thermostats/ae42a3d7-2bd8-47d4-9b1f-d666daa0cddd/",
@@ -278,12 +278,12 @@ In this section we explain the APIs supported by this application and their usag
 }
 ```
 #### HTTP DELETE [http://localhost:8008/thermostats/<thermostat_id>](http://localhost:8008/thermostats/<thermostat_id>)
-`Request Content` : `None`
-`Response Content` :`HTTP 204 No Content`
+`Request Content` : `None`<br/>
+`Response` :`HTTP 204 No Content`
 
 ## Rooms
-`HTTP Request URL` : [http://localhost:8008/rooms/](http://localhost:8008/rooms/)
-`HTTP Methods Supported` : `GET, POST, HEAD, OPTIONS`
+`HTTP Request URL` : [http://localhost:8008/rooms/](http://localhost:8008/rooms/)<br/>
+`HTTP Methods Supported` : `GET, POST, HEAD, OPTIONS`<br/>
 `HTTP GET Response` :
 ```
 {
@@ -350,8 +350,8 @@ In this section we explain the APIs supported by this application and their usag
 ```
 
 ## Rooms < ID >
-`HTTP Request URL` : [http://localhost:8008/rooms/<room_id>](http://localhost:8008/rooms/<room_id>)
-`HTTP Methods Supported` : `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`
+`HTTP Request URL` : [http://localhost:8008/rooms/<room_id>](http://localhost:8008/rooms/<room_id>)<br/>
+`HTTP Methods Supported` : `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`<br/>
 `HTTP GET Response` :
 ```
 {
@@ -431,8 +431,8 @@ In this section we explain the APIs supported by this application and their usag
 }
 ```
 #### HTTP DELETE [http://localhost:8008/rooms/<room_id>](http://localhost:8008/rooms/<room_id>)
-`Request Content` : `None`
-`Response Content` :`HTTP 204 No Content`
+`Request Content` : `None`<br/>
+`Response` :`HTTP 204 No Content`<br/>
 
 ## Lights
 `HTTP Request URL` : [http://localhost:8008/lights/](http://localhost:8008/lights/)
@@ -486,8 +486,8 @@ In this section we explain the APIs supported by this application and their usag
 ```
 
 ## Lights < ID >
-`HTTP Request URL` : [http://localhost:8008/lights/<light_id>](http://localhost:8008/lights/<light_id>)
-`HTTP Methods Supported` : `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`
+`HTTP Request URL` : [http://localhost:8008/lights/<light_id>](http://localhost:8008/lights/<light_id>)<br/>
+`HTTP Methods Supported` : `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`<br/>
 `HTTP GET Response` :
 ```
 {
@@ -546,8 +546,8 @@ In this section we explain the APIs supported by this application and their usag
 ```
 
 #### HTTP DELETE [http://localhost:8008/lights/<light_id>](http://localhost:8008/lights/<light_id>)
-`Request Content` : `None`
-`Response Content` :`HTTP 204 No Content`
+`Request Content` : `None`<br/>
+`Response Content` :`HTTP 204 No Content`<br/>
 
 # State change Information:
 As per the requirement:
@@ -567,10 +567,16 @@ These are JSON (PostgreSQL native JSON support) fields in the schema which hold 
 
 ##### One such example is shown below, more in the screenshots.
 `Schema:` `homes_thermostatchangeinformation`
-| created_at                   	| updated_at                    	| id                                   	| previous_state                                                     	| next_state                                                         	|             thermostat_id            	|
-|------------------------------	|-------------------------------	|--------------------------------------	|--------------------------------------------------------------------	|--------------------------------------------------------------------	|:------------------------------------:	|
-| 2020-01-22 05:18:43.44683+00 	| 2020-01-22 05:18:43.446853+00 	| 129c54e3-0b8d-4933-b53f-f4da09217eb3 	| {"current_temperature": "20.00", "temperature_set_point": "28.00"} 	| {"current_temperature": "25.00", "temperature_set_point": "29.00"} 	| ae42a3d7-2bd8-47d4-9b1f-d666daa0cddd 	|
+```
+created_at: 2020-01-22 05:18:43.44683+00
+updated_at: 2020-01-22 05:18:43.446853+00
+id: 129c54e3-0b8d-4933-b53f-f4da09217eb3
+previous_state: {"current_temperature": "20.00", "temperature_set_point": "28.00"}
+next_state: {"current_temperature": "25.00", "temperature_set_point": "29.00"}
+thermostat_id: ae42a3d7-2bd8-47d4-9b1f-d666daa0cddd
+```
 
+There are similar methods and examples for Lights and Rooms too! <br/>
 
 **NOTE:** Using the information stored in the state change schemas - we can build specific endpoints to show (historical) state change data (which accepts a pair of date/datetimes in addition to resource IDs) to show/track changes over time.
 
