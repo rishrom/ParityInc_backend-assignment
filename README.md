@@ -485,7 +485,7 @@ In this section we explain the APIs supported by this application and their usag
 }
 ```
 
-## Rooms < ID >
+## Lights < ID >
 `HTTP Request URL` : [http://localhost:8008/lights/<light_id>](http://localhost:8008/lights/<light_id>)
 `HTTP Methods Supported` : `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`
 `HTTP GET Response` :
@@ -567,12 +567,12 @@ These are JSON (PostgreSQL native JSON support) fields in the schema which hold 
 
 ##### One such example is shown below, more in the screenshots.
 `Schema:` `homes_thermostatchangeinformation`
-| created_at | updated_at |id|previous_state|next_state|thermostat_id|
-|--|--|--|--|--|--|
-|2020-01-22 05:18:43.44683+00|2020-01-22 05:18:43.446853+00|129c54e3-0b8d-4933-b53f-f4da09217eb3|{"current_temperature": "20.00", "temperature_set_point": "28.00"}|{"current_temperature": "25.00", "temperature_set_point": "29.00"}|ae42a3d7-2bd8-47d4-9b1f-d666daa0cddd|
+| created_at                   	| updated_at                    	| id                                   	| previous_state                                                     	| next_state                                                         	|             thermostat_id            	|
+|------------------------------	|-------------------------------	|--------------------------------------	|--------------------------------------------------------------------	|--------------------------------------------------------------------	|:------------------------------------:	|
+| 2020-01-22 05:18:43.44683+00 	| 2020-01-22 05:18:43.446853+00 	| 129c54e3-0b8d-4933-b53f-f4da09217eb3 	| {"current_temperature": "20.00", "temperature_set_point": "28.00"} 	| {"current_temperature": "25.00", "temperature_set_point": "29.00"} 	| ae42a3d7-2bd8-47d4-9b1f-d666daa0cddd 	|
 
 
-**NOTE:** Using the information stored in the state change scehmas - we can build specific endpoints to show (historical) state change data (which accepts a pair of date/datetimes in addition to resource IDs) to show/track changes over time.
+**NOTE:** Using the information stored in the state change schemas - we can build specific endpoints to show (historical) state change data (which accepts a pair of date/datetimes in addition to resource IDs) to show/track changes over time.
 
 # Troubleshooting
  1. If you see the message `This setup assumed Docker is installed on this machine.
