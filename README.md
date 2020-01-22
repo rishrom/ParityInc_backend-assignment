@@ -29,6 +29,11 @@ In this section we explain the APIs supported by this application and their usag
 `HTTP Request URL` : [http://localhost:8008/houses/](http://localhost:8008/houses/)<br/>
 `HTTP Methods Supported` : `GET, POST, HEAD, OPTIONS`<br/>
 `HTTP GET Response` :
+**NOTE:** The following requirement is also fulfilled as this response contains all house data.
+>We would ideally want to make as few as possible requests when getting the house data from
+the API, this would allow us to show the current state of the house on our dashboard without querying
+multiple API’s to get the state for each piece of equipment.
+
 ```
 {
 	"count": 1,
