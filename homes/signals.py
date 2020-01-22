@@ -3,6 +3,11 @@ from django.dispatch import receiver
 
 from .models import *
 
+#
+# There was thought given to using signals for storing state change information
+# but instead the design choise to override the update() and partial_update()
+# methods was made.
+#
 @receiver(post_save, sender=House)
 @receiver(post_save, sender=Thermostat)
 @receiver(post_save, sender=Room)
